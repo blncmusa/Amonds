@@ -1,0 +1,252 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    background: white;
+    color: rgba(147, 98, 23, 0.875)
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-shadow:  6px 0 4px -4px rgba(0,0,0,0.7)
+}
+
+#right {
+    flex: 1;
+} 
+
+/* sign-in form format */
+
+#top-sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+#top-sign-in form {
+    width: 80%;
+    padding-bottom: 2rem;
+}
+
+.logo {
+    margin-bottom: 5vh;
+}
+
+.logo img {
+    width: 300px;
+}
+
+#top-sign-in label {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500; 
+}
+
+#top-sign-in .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(189, 189, 189);
+    height: 1.5rem;
+    padding: 0px 0px 0px 10px;
+    color: black;
+}
+
+#top-sign-in .secondary-btn, .links-beneath, #or {
+    width: 60%;
+}
+
+.links-beneath a {
+    color: rgb(147, 98, 23, 0.875);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+#or .bar {
+    flex: auto;
+    border: 0;
+    height: 1px;
+    background: black;   
+}
+
+#or span {
+    color:rgb(147, 98, 23, 0.875);
+    padding: 0 0.8rem;
+}
+
+/* Rigth Side -- Showcase */
+
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/img-jap.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.showcase-text {
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    transition: all .5s ease-in-out;
+}
+
+.showcase-text:hover {
+    transform: scale(1.1);
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Buttons */
+
+#top-sign-in .primary-btn {
+    width: 100%;
+}
+
+.primary-btn {
+    margin-top: 0.5rem;
+    border:rgb(189, 189, 189);
+    padding: 0.4rem 0.4rem;
+    display: block;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: rgb(255, 232, 198);
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s; 
+}
+
+.primary-btn:hover {
+    background-color: rgb(250, 215, 162);
+}
+
+.secondary-btn {
+    margin-top: 0.5rem;
+    border:rgb(189, 189, 189);
+    padding: 0.4rem 0.8rem;
+    display: block;
+    border: 1px solid rgb(250, 215, 162);
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: none;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s; 
+}
+
+.secondary-btn:hover {
+    background-color: rgb(250, 215, 162);
+}
+
+#third-btn {
+    margin-top: 0.5rem;
+    margin: auto;
+    border:rgb(189, 189, 189);
+    padding: 0.4rem 0.8rem;
+    display: block;
+    border: 1px solid rgb(250, 215, 162);
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s; 
+    width: 60%;
+    font-size: 1.4rem;
+}
+
+#third-btn:hover {
+    background-color: rgb(250, 215, 162);
+    color: black;
+}
+
+/* Footer */
+
+#main-footer {
+    text-align: center;
+    width: 100%;
+    padding-top: 5rem;
+    color: rgba(147, 97, 23, 0.687);
+}
+
+#main-footer a {
+    text-decoration: none;
+    padding: 0.9rem;
+    color: rgb(147, 98, 23, 0.875)
+}
+
+
+/* Media Query  */
+
+@media(min-width: 1200px) {
+    #left {
+        flex: 4;
+    }
+
+    #right {
+        flex: 6;
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    #right {
+        display:none;
+    }
+
+    #left {
+        justify-content: flex-start;
+        margin-top: 2vh;
+    }
+
+}
